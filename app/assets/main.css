@@ -1,0 +1,28 @@
+:root { --y: #ffcf3f; --ink: #141414; }
+* { box-sizing: border-box; margin: 0; }
+body { font-family: 'Work Sans', sans-serif; background: var(--y); color: var(--ink); }
+a { color: inherit; text-decoration: none; }
+.anton { font-family: Anton, sans-serif; font-weight: 400; text-transform: uppercase; }
+
+.nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 40px; border-bottom: 3px solid var(--ink); font-weight: 800; text-transform: uppercase; font-size: 14px; }
+.nav .links { display: flex; gap: 32px; }
+.nav .links a.router-link-active { text-decoration: underline; text-decoration-thickness: 3px; text-underline-offset: 6px; }
+.logo { font-family: Anton, sans-serif; font-size: 30px; letter-spacing: 1px; }
+
+.page { padding: 40px; }
+.box { border: 3px solid var(--ink); border-radius: 22px; background: #fff; box-shadow: 6px 6px 0 var(--ink); }
+.btn { display: inline-block; font: inherit; font-weight: 800; text-transform: uppercase; background: var(--ink); color: var(--y); border: 3px solid var(--ink); border-radius: 99px; padding: 14px 24px; cursor: pointer; transition: transform .15s, box-shadow .15s; }
+.btn:hover { transform: translate(-2px, -2px); box-shadow: 4px 4px 0 var(--ink); }
+
+.cans { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 20px; }
+.can { padding: 20px; transition: transform .2s, box-shadow .2s; display: block; }
+.can:hover { transform: translate(-3px, -3px) rotate(-1deg); box-shadow: 10px 10px 0 var(--ink); }
+.tin { height: 180px; border-radius: 16px; border: 3px solid var(--ink); display: grid; place-items: center; font-family: Anton, sans-serif; font-size: 36px; color: #fff; -webkit-text-stroke: 1.5px var(--ink); margin-bottom: 16px; }
+.can h3 { font-family: Anton, sans-serif; font-size: 26px; text-transform: uppercase; font-weight: 400; }
+.can p { font-size: 14px; font-weight: 600; margin-top: 4px; }
+.abv { display: inline-block; margin-top: 12px; background: var(--ink); color: var(--y); padding: 4px 10px; border-radius: 99px; font-size: 12px; font-weight: 800; }
+
+@media (max-width: 860px) {
+  .nav, .page { padding-left: 16px; padding-right: 16px; }
+  .nav .links { gap: 14px; font-size: 12px; }
+}
